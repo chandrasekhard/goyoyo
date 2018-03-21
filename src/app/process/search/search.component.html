@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col">
+    <h4>
+        Search Hotels
+    </h4>
+  </div>
+
+</div>
+<div class="row searchContainer my-4 mx-5 px-5 pt-5 pb-3 ">
+
+<div class="col">
+<span> Search String : </span> <input type="text"  [(ngModel)]="searchString">
+</div>
+<div class="col">
+    <span> Maximum Results : </span>
+    <select name="" id="" [(ngModel)]="maxHotelsDisplay">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+      <option value="25">25</option>
+    </select>
+</div>
+<div class="col-12 text-center mt-4">
+    <button type="button" class="btn btn-primary searchbutton" (click)="findHotels()" >Find Hotels</button>
+</div>
+</div>

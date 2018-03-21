@@ -1,0 +1,55 @@
+{
+    "status" : "SUCCESS",
+    "hotelList" : [
+    {
+        "hotelId": 1,
+        "HotelName": "LeelaPalace",
+        "Address1": "HAL",
+        "Address2": "Bangalore",
+        "Pincode": "560029",
+        "City": "Bangalore",
+        "DayRate": "2000",
+        "NightRate": "2500"
+    },
+    {
+        "HotelId": 2,
+        "HotelName": "Taj",
+        "Address1": "MG Road",
+        "Address2": "Chenni",
+        "Pincode": "560001",
+        "City": "Bangalore",
+        "DayRate": "3000",
+        "NightRate": "3500"
+    },
+    {
+        "HotelId": 3,
+        "HotelName": "Oberai",
+        "Address1": "JC Road",
+        "Address2": "Pune",
+        "Pincode": "560003",
+        "City": "Bangalore",
+        "DayRate": "1500",
+        "NightRate": "2000"
+    },
+    {
+        "HotelId": 4,
+        "HotelName": "Key",
+        "Address1": "ECity",
+        "Address2": "Amaravati",
+        "Pincode": "560004",
+        "City": "Bangalore",
+        "DayRate": "4500",
+        "NightRate": "5000"
+    },
+    {
+        "HotelId": 5,
+        "HotelName": "Velvet",
+        "Address1": "KC Road",
+        "Address2": "Bangalore",
+        "Pincode": "560006",
+        "City": "Bangalore",
+        "DayRate": "5500",
+        "NightRate": "7000"
+    }
+]
+}

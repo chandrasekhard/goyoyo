@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col">
+    <h4>Hotel Results</h4>
+  </div>
+</div>
+<div class="row py-3">
+  <div class="col">
+    <button type="button" class="btn btn-primary searchbutton" (click)="changeSearch()">Change Search</button>
+  </div>
+</div>
+key = {{hotelKey | async}}
+<div class="row">
+  <div class="col">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City.State</th>
+          <th>Zip</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hotel of (hotelList | async) | filterHotel: (hotelKey | async)">
+          <td>{{ hotel.HotelName }}</td>
+          <td>{{ hotel.Address1 }}</td>
+          <td>{{ hotel.Address2 }}</td>
+          <td>{{ hotel.Pincode}}</td>
+          <td>
+            <button type="button" class="btn btn-primary searchbutton" (click)="viewHotelDetails()">View Hotel</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
