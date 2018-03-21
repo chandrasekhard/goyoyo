@@ -53,6 +53,15 @@ export function yoyoRootReducer(state: YoYoAppState = INIT_STATE, action): YoYoA
 			console.log('failedPayload', action.payload);
 			return Object.assign({}, state);
 
+
+		// All Admin Actions here...
+		case yoyoActions.HOTEL_VIEW:
+			console.log('view hotel details action');
+			console.log('payload', action.payload);
+			return Object.assign({}, state, {
+				currentHotel: action.payload
+			});
+
 		default: return state;
 	}
 }

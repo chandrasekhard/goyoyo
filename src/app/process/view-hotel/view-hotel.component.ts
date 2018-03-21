@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Hotel } from '../../model/hotel.model';
+
+import { Observable } from 'rxjs/Observable';
+import { Store, select } from '@ngrx/store';
 
 @Component({
   selector: 'yoyo-view-hotel',
@@ -8,7 +12,11 @@ import { Router } from '@angular/router';
 })
 export class ViewHotelComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  selectedHotel: Observable<Hotel>;
+
+  constructor(private store: Store<any>, private router: Router) {
+    this.selectedHotel = store.pipe(select((s) => s.appState.currentHotel));
+   }
 
   ngOnInit() {
   }

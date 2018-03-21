@@ -8,7 +8,7 @@
     <button type="button" class="btn btn-primary searchbutton" (click)="changeSearch()">Change Search</button>
   </div>
 </div>
-key = {{hotelKey | async}}
+
 <div class="row">
   <div class="col">
     <table class="table table-striped">
@@ -28,7 +28,7 @@ key = {{hotelKey | async}}
           <td>{{ hotel.Address2 }}</td>
           <td>{{ hotel.Pincode}}</td>
           <td>
-            <button type="button" class="btn btn-primary searchbutton" (click)="viewHotelDetails()">View Hotel</button>
+            <button type="button" class="btn btn-primary searchbutton" (click)="viewHotelDetails(hotel)">View Hotel</button>
           </td>
         </tr>
       </tbody>

@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 
 import { Store, select } from '@ngrx/store';
 
+import * as yoyoActions from '../../action/yoyo-action';
+
 @Component({
   selector: 'yoyo-hotel-list',
   templateUrl: './hotel-list.component.html',
@@ -12,7 +14,7 @@ import { Store, select } from '@ngrx/store';
 })
 export class HotelListComponent implements OnInit {
 
-  hotelList: Observable<Hotel>;
+  hotelList: Observable<Hotel[]>;
   hotelKey: Observable<string>;
 
   constructor(private store: Store<any>, private router: Router) {
@@ -31,8 +33,9 @@ export class HotelListComponent implements OnInit {
     this.router.navigate(['/search']);
   }
 
-  viewHotelDetails(){
+  viewHotelDetails(hotel){
     console.log('View Hotel button clicked...');
+    this.store.dispatch({ type: yoyoActions.HOTEL_VIEW, payload: hotel});
     this.router.navigate(['/view']);
   }
 }
