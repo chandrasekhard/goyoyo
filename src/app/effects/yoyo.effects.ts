@@ -27,7 +27,7 @@ export class YoyoEffects {
 						.map((resp) => {
 							return (resp.status === 'error') ?
 								new yoyoActions.HotelSearchFailed({ message: 'error occured', status: resp.status })
-								: new yoyoActions.HotelSearchSuccess(resp.hotelList);
+								: new yoyoActions.HotelSearchSuccess(resp.msg);
 						})
 						.catch((err) => Observable.of({ type: yoyoActions.HOTEL_SEARCH_FAILED, payload: { message: err, status: 'error' } }))
         });

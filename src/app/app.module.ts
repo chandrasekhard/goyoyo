@@ -20,6 +20,7 @@ import { HotelListComponent } from './process/hotel-list/hotel-list.component';
 import { ViewHotelComponent } from './process/view-hotel/view-hotel.component';
 import { YoyoService } from './services/yoyo.service';
 import { FilterHotelPipe } from './pipe/filter-hotel.pipe';
+import { BookHotelComponent } from './process/book-hotel/book-hotel.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FilterHotelPipe } from './pipe/filter-hotel.pipe';
     SearchComponent,
     HotelListComponent,
     ViewHotelComponent,
-    FilterHotelPipe
+    FilterHotelPipe,
+    BookHotelComponent
   ],
   imports: [
     BrowserModule,AppRoutingModule, FormsModule, HttpClientModule,

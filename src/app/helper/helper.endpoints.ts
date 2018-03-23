@@ -1,2 +1,2 @@
-// export const searchApi = 'http://localhost:4200/api/search';
-export const searchApi = '/assets/data/hotelList.json';
+ export const searchHotels = 'http://localhost:5000/api/hotels';
+//export const searchApi = '/assets/data/hotelList.json';

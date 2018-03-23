@@ -13,7 +13,7 @@ export class YoyoService {
   // Generic HTTP GET REQUEST
   getRequest(url: string): Observable<any> {
     return this.http.get(url)
-      .pipe(map((resp) => resp ), catchError(this.handleError));
+      .pipe(map((resp) => resp), catchError(this.handleError));
   }
 
   // Generic HTTP POST REQUEST with optional header
@@ -28,6 +28,9 @@ export class YoyoService {
   }
 
   // Service Call for Search Hotel
-  searchHotel(req): Observable<any> { return this.getRequest(endpoints.searchApi); }
+  searchHotel(req): Observable<any> {
+    console.log('request object to service ', req);
+    return this.postRequest(endpoints.searchHotels, req);
+  }
 
 }
