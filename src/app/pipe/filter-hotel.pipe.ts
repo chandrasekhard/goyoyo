@@ -9,7 +9,7 @@ export class FilterHotelPipe implements PipeTransform {
     console.log('searchKey', searchKey);
     console.log('inside pipe', value );
     return value.filter((hotel) => {
-      return (hotel.Address2 === searchKey) ? true : false;
+      return (hotel.City === searchKey) ? true : false;
     });
   }
 

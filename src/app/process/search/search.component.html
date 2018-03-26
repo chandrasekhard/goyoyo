@@ -13,12 +13,8 @@
 </div>
 <div class="col">
     <span> Maximum Results : </span>
-    <select name="" id="" [(ngModel)]="maxHotelsDisplay">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="15">15</option>
-      <option value="20">20</option>
-      <option value="25">25</option>
+    <select name="" id="" [(ngModel)]="maxHotelsDisplay" value>
+      <option *ngFor="let count of listCount" [ngValue]="count">{{count}}</option>
     </select>
 </div>
 <div class="col-12 text-center mt-4">

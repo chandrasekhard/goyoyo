@@ -21,6 +21,7 @@ import { ViewHotelComponent } from './process/view-hotel/view-hotel.component';
 import { YoyoService } from './services/yoyo.service';
 import { FilterHotelPipe } from './pipe/filter-hotel.pipe';
 import { BookHotelComponent } from './process/book-hotel/book-hotel.component';
+import { YoyoGuard } from './guard/yoyo.guard';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { BookHotelComponent } from './process/book-hotel/book-hotel.component';
     BrowserModule,AppRoutingModule, FormsModule, HttpClientModule,
     StoreModule.forRoot({ appState: yoyoRootReducer }), EffectsModule.forRoot([YoyoEffects])
   ],
-  providers: [YoyoService],
+  providers: [YoyoService,YoyoGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

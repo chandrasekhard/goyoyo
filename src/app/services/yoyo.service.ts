@@ -8,6 +8,7 @@ import { catchError, map } from 'rxjs/operators';
 @Injectable()
 export class YoyoService {
 
+
   constructor(private http: HttpClient) { }
 
   // Generic HTTP GET REQUEST
